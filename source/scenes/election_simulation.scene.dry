@@ -283,37 +283,37 @@ The electoral system is essentially proportional, with the proportion of Reichst
  
 **Election results:**
 
-# 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]
+# 1928: 15, 1930: 25, 1932: 22
+SFIO: [+ sfio_r +]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]
+MRP: [+ mrp_r +]
 
-# 1928: 10, 1930: 13
-KPD: [+ kpd_r +]
+# 1928: 25, 1930: 13
+PCF: [+ pcf_r +]
 
-# 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]
+# 1928: 10, 1930: 4 (as DstP)
+PR: [+ pr_r +]
 
-# 1928: 9, 1930: 5
-DVP: [+ dvp_r +]
+# 1928: 15, 1930: 5
+CNIP: [+ cnip_r +]
 
-# 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]
+# 1928: 8, 1930: 7
+UFF: [+ uff_r +]
 
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]
+# 1928: 2, 1930: 18
+UNR: [+ unr_r +]
 
-# 1928: 9, 1930: 10
+# 1928: 10, 1930: 10
 Other: [+ other_r +]
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + DDP): [+ weimar_coalition +]
+Coalition Tripartite (SFIO + MRP + PR): [+ coalition_tripartite +]
 
-Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]
+Troisième Force (SFIO + MRP + PR + CNIP): [+ troisieme_force +]
 
-Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]
+Bourgeois Coalition (MRP + PR + CNIP + Others): [+ bourgeois_coalition +]
 
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]
+Conservative Coalition (MRP + CNIP + Others + UFF): [+ conservative_coalition +]
 
