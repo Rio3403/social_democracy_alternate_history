@@ -2,79 +2,79 @@ title: Election Simulation
 set-jump: post_election
 
 
-- @1928: 1928 historical scenario
+- @1954: 1954 historical scenario
 - @1930: 1930 historical scenario
 - @1932: 1932 (July) historical scenario
 
-@1928
+@1954
 on-arrival: {!
-Q.workers = 46; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
+Q.workers = 45; // industry and trade
+Q.old_middle = 14; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
+Q.new_middle = 19; // "new mittelstand"
+Q.rural = 20; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
-Q.catholics = 30;
+Q.unemployed = 2;
+Q.catholics = 0;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['sfio', 'pcf', 'mrp', 'pr', 'cnip', 'uff', 'unr', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 65;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.workers_sfio = 24;
+Q.workers_pcf = 38;
+Q.workers_mrp = 15;
+Q.workers_pr = 5;
+Q.workers_cnip = 0;
+Q.workers_uff = 15;
+Q.workers_unr = 0;
+Q.workers_other = 15;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
+Q.old_middle_sfio = 5;
+Q.old_middle_pcf = 0;
+Q.old_middle_mrp = 20;
+Q.old_middle_pr= 15;
+Q.old_middle_cnip = 25;
+Q.old_middle_uff = 30;
+Q.old_middle_unr = 5;
 Q.old_middle_other = 10;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 0;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.new_middle_sfio = 20;
+Q.new_middle_pcf = 5;
+Q.new_middle_mrp = 20;
+Q.new_middle_pr= 30;
+Q.new_middle_cnip = 0;
+Q.new_middle_uff = 10;
+Q.new_middle_unr = 0;
+Q.new_middle_other = 10;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
+Q.rural_sfio = 5;
+Q.rural_pcf = 0;
+Q.rural_mrp = 30;
+Q.rural_pr= 15;
+Q.rural_cnip = 25;
+Q.rural_uff = 15;
+Q.rural_unr = 5;
 Q.rural_other = 10;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
+Q.unemployed_sfio = 25;
+Q.unemployed_pcf = 40;
+Q.unemployed_mrp = 10;
+Q.unemployed_pr = 0;
+Q.unemployed_cnip = 0;
+Q.unemployed_uff = 5;
+Q.unemployed_unr = 0;
 Q.unemployed_other = 9;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 5;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 10;
+Q.catholics_sfio = 0;
+Q.catholics_pcf = 0;
+Q.catholics_mrp = 0;
+Q.catholics_pr = 0;
+Q.catholics_cnip = 0;
+Q.catholics_uff = 0;
+Q.catholics_unr = 0;
+Q.catholics_other = 0;
 !}
 go-to: election_algorithm
 set-jump: post_election
