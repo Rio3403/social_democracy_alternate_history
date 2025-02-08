@@ -246,32 +246,32 @@ set-jump: post_election
 @post_election
 on-arrival: {!
 // set congress proportion to votes
-Q.spd_r = Q.spd_votes;
-Q.z_r = Q.z_votes;
-Q.kpd_r = Q.kpd_votes;
-Q.ddp_r = Q.ddp_votes;
-Q.dvp_r = Q.dvp_votes;
-Q.dnvp_r = Q.dnvp_votes;
-Q.nsdap_r = Q.nsdap_votes;
+Q.sfio_r = Q.sfio_votes;
+Q.mrp_r = Q.mrp_votes;
+Q.pcf_r = Q.pcf_votes;
+Q.pr_r = Q.pr_votes;
+Q.cnip_r = Q.cnip_votes;
+Q.uff_r = Q.uff_votes;
+Q.unr_r = Q.unr_votes;
 Q.other_r = Q.other_votes;
 
 // The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
+Q.largest_party = 'SFIO';
+if (Q.unr_r >= Q.sfio_r && Q.unr_r >= Q.pcf_r) {
+    Q.largest_party = 'UNR';
 }
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
+if (Q.pcf_r >= Q.sfio_r && Q.pcf_r >= Q.unr_r) {
+    Q.largest_party = 'PCF';
 }
 
-// coalitions
-Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
-Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
+// coalitions BEAUCOUP A AJOUTER !!!!! 
+Q.coalition_tripartite = Q.sfio_r + Q.pr_r + Q.mrp_r - 3;
+Q.troisieme_force = Q.sfio_r + Q.pr_r + Q.mrp_r + Q.cnip_r;
+Q.bourgeois_coalition = Q.pr_r + Q.mrp_r + Q.cnip_r + Q.other_r;
+Q.right_coalition = Q.mrp_r + Q.pr_r + Q.cnip_r + Q.other_r + Q.uff_r;
+Q.conservative_coalition = Q.mrp_r + Q.cnip_r + Q.other_r + Q.uff_r;
 Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
-Q.left_coalition = Q.spd_r + Q.kpd_r;
+Q.left_coalition = Q.sfio_r + Q.pcf_r;
 // this is an absurd concept lol
 Q.united_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3;
 Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r;
